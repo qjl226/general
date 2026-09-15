@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>河南禄缤诺网络科技有限公司 | 企业数字化与网络技术服务</title>
+<meta name="description" content="河南禄缤诺网络科技有限公司，提供软件开发、信息技术咨询、网络推广、广告设计、增值电信服务等一站式企业数字化解决方案。" />
+<style>
+  :root{
+    --primary:#2563eb;
+    --primary-dark:#1e40af;
+    --bg:#f8fafc;
+    --text:#1f2937;
+    --muted:#64748b;
+    --line:#e5e7eb;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--text);background:var(--bg);line-height:1.6;
+  }
+  a{text-decoration:none;color:inherit}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+  .btn{
+    display:inline-block;background:var(--primary);color:#fff;
+    padding:12px 28px;border-radius:8px;font-weight:600;transition:.2s;
+  }
+  .btn:hover{background:var(--primary-dark)}
+  .btn-outline{
+    background:transparent;border:1px solid var(--primary);color:var(--primary);
+  }
+  .btn-outline:hover{background:var(--primary);color:#fff}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-size:20px;font-weight:800;color:var(--primary-dark)}
+  .logo span{color:var(--primary)}
+  .menu{display:flex;gap:28px;font-size:15px}
+  .menu a:hover{color:var(--primary)}
+  .toggle{display:none;font-size:24px;cursor:pointer}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#eff6ff 0%,#f8fafc 100%);
+    padding:90px 0 70px;text-align:center;
+  }
+  .hero h1{font-size:40px;line-height:1.25;margin-bottom:18px}
+  .hero p{font-size:18px;color:var(--muted);max-width:680px;margin:0 auto 30px}
+  .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+  /* Section */
+  section{padding:70px 0}
+  .section-title{text-align:center;margin-bottom:44px}
+  .section-title h2{font-size:30px;margin-bottom:10px}
+  .section-title p{color:var(--muted)}
+
+  /* Cards */
+  .grid{display:grid;gap:24px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    padding:28px;transition:.2s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(37,99,235,.08)}
+  .card h3{font-size:18px;margin:14px 0 8px}
+  .card p{color:var(--muted);font-size:14px}
+  .icon{
+    width:48px;height:48px;border-radius:12px;background:#eff6ff;
+    display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--primary);
+  }
+
+  /* About */
+  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .about ul{list-style:none;margin-top:16px}
+  .about li{padding-left:22px;position:relative;margin-bottom:10px;color:var(--muted)}
+  .about li::before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:700}
+
+  /* Process */
+  .process .step{
+    text-align:center;padding:24px;border-radius:12px;background:#fff;border:1px solid var(--line);
+  }
+  .step-num{
+    width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-weight:700;
+  }
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .info-item{margin-bottom:18px}
+  .info-item b{display:block;color:var(--text);margin-bottom:4px}
+  .info-item span{color:var(--muted)}
+  form input,form textarea{
+    width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;
+    margin-bottom:14px;font-size:15px;font-family:inherit;
+  }
+  form button{width:100%;border:none;cursor:pointer}
+
+  /* Footer */
+  footer{background:#0f172a;color:#cbd5e1;padding:36px 0;font-size:14px}
+  .footer-flex{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+  .footer-flex a{color:#93c5fd}
+
+  /* Responsive */
+  @media(max-width:860px){
+    .menu{
+      position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;
+      gap:0;max-height:0;overflow:hidden;border-bottom:1px solid var(--line);
+    }
+    .menu.active{max-height:320px}
+    .menu a{padding:14px 20px;border-top:1px solid var(--line)}
+    .toggle{display:block}
+    .hero h1{font-size:30px}
+    .grid-3,.grid-4,.about-grid,.contact-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <div class="logo">禄缤诺<span>网络科技</span></div>
+    <nav class="menu" id="menu">
+      <a href="#home">首页</a>
+      <a href="#about">关于我们</a>
+      <a href="#services">业务服务</a>
+      <a href="#process">服务流程</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+    <div class="toggle" id="toggle">☰</div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>用技术与运营，帮企业把业务搬上网</h1>
+    <p>
+      河南禄缤诺网络科技有限公司 · 立足郑州，面向全国，
+      提供软件开发、信息技术咨询、网络推广与广告服务的一体化数字解决方案。
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn">免费咨询方案</a>
+      <a href="#services" class="btn btn-outline">查看服务能力</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>我们能为你做什么</h2>
+      <p>从技术搭建到线上增长，覆盖中小企业数字化基础需求</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>软件开发与系统定制</h3>
+        <p>官网、小程序、管理后台、业务系统定制开发，按需交付、可迭代。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>信息技术咨询</h3>
+        <p>企业上云、系统集成、数据流转与运维方案，降低技术决策成本。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📣</div>
+        <h3>网络推广与广告</h3>
+        <p>广告设计、内容投放、品牌曝光与线索承接，打通「展示—咨询」闭环。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>增值电信与运营服务</h3>
+        <p>依托合规资质，提供信息服务、线上业务支撑与长期技术运维。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="section-title" style="text-align:left;margin-bottom:20px">
+        <h2>关于禄缤诺</h2>
+      </div>
+      <p style="color:var(--muted)">
+        河南禄缤诺网络科技有限公司成立于 2023 年，注册位于河南省郑州市中原区，
+        是一家聚焦「信息技术 + 网络运营」的科技服务企业。我们服务电商、零售、
+        本地生活及传统转型企业，用轻量、可落地的技术方案帮客户把业务线上化。
+      </p>
+      <ul>
+        <li>合规经营：持有增值电信业务相关资质</li>
+        <li>本地响应：郑州本地团队，沟通成本低</li>
+        <li>结果导向：不止做「网站」，更关注咨询与转化</li>
+        <li>长期运维：交付不是终点，持续迭代支持</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:14px">企业信息</h3>
+      <p><b>公司名称：</b>河南禄缤诺网络科技有限公司</p>
+      <p><b>成立时间：</b>2023 年 5 月</p>
+      <p><b>注册地址：</b>河南省郑州市中原区陇海西路 639 号昱峰医疗产业园一号楼 15-12 号</p>
+      <p><b>主营行业：</b>信息技术咨询服务 / 软件开发 / 广告服务</p>
+      <p><b>统一社会信用代码：</b>91410102MACK64JP6Y</p>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-title">
+      <h2>标准服务流程</h2>
+      <p>透明、可控、可复盘，让合作更省心</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="step"><div class="step-num">1</div><h3>需求沟通</h3><p>梳理业务目标与落地场景</p></div>
+      <div class="step"><div class="step-num">2</div><h3>方案报价</h3><p>输出原型、功能清单与周期</p></div>
+      <div class="step"><div class="step-num">3</div><h3>开发交付</h3><p>分阶段验收，源码/账号移交</p></div>
+      <div class="step"><div class="step-num">4</div><h3>运维迭代</h3><p>线上问题响应与功能升级</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>联系我们</h2>
+      <p>说清你的业务，我们给你可落地的技术建议</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card">
+        <div class="info-item">
+          <b>📍 公司地址</b>
+          <span>河南省郑州市中原区陇海西路 639 号昱峰医疗产业园一号楼 15-12 号</span>
+        </div>
+        <div class="info-item">
+          <b>📞 联系电话</b>
+          <span>135XXXXXXXX（微信同号，占位请替换）</span>
+        </div>
+        <div class="info-item">
+          <b>✉️ 邮箱</b>
+          <span>contact@lubinnuo-tech.com（占位请替换）</span>
+        </div>
+        <div class="info-item">
+          <b>🕘 工作时间</b>
+          <span>周一至周六 9:00 - 18:00</span>
+        </div>
+      </div>
+      <form onsubmit="alert('已提交，我们会尽快联系您（演示表单，需接后端）');return false;">
+        <input type="text" placeholder="您的称呼 *" required />
+        <input type="tel" placeholder="联系电话 *" required />
+        <input type="text" placeholder="公司 / 项目名" />
+        <textarea rows="4" placeholder="简单描述您的需求，如：做个企业官网 + 小程序"></textarea>
+        <button type="submit" class="btn">提交咨询</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container footer-flex">
+    <div>
+      © <span id="year"></span> 河南禄缤诺网络科技有限公司 ·
+      豫B2-20231059（示例占位，以实际许可证为准）
+    </div>
+    <div>
+      <a href="#home">首页</a> ·
+      <a href="#about">关于我们</a> ·
+      <a href="#contact">联系我们</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // 移动端菜单
+  const toggle = document.getElementById('toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('active'));
+  menu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => menu.classList.remove('active'))
+  );
+</script>
+</body>
+</html>
